@@ -171,7 +171,7 @@ class GetDeepSearchResults(ZillowResults):
         'zestimate_value_change': 'result/zestimate/valueChange',
         'zestimate_valuation_range_high':
         'result/zestimate/valuationRange/high',
-        'zestimate_valuationRange_low': 'result/zestimate/valuationRange/low',
+        'zestimate_valuation_range_low': 'result/zestimate/valuationRange/low',
         'zestimate_percentile': 'result/zestimate/percentile',
         'region_zindex_value': 'result/localRealEstate/region/zindexValue',
         'region_overview_link': 'result/localRealEstate/region/links/overview',

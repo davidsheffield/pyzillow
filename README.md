@@ -74,6 +74,12 @@ The following attributes are currently supported:
     - last_sold_date
     - last_sold_price_currency
     - last_sold_price
+    - zestimate_amount
+    - zestimate_last_updated
+    - zestimate_value_change
+    - zestimate_valuation_range_high
+    - zestimate_valuation_range_low
+    - zestimate_percentile
     - region_zindex_value
     - region_overview_link
     - region_fsbo_link
