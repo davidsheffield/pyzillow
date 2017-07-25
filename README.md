@@ -99,6 +99,10 @@ The following attributes are currently supported:
     - home_type
     - home_detail_link
     - photo_gallery
+    - street_address
+    - zipcode
+    - city
+    - state
     - latitude
     - longitude
     - year_built
