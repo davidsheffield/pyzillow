@@ -229,6 +229,7 @@ class GetUpdatedPropertyDetails(ZillowResults):
         'parking_type': 'editedFacts/parkingType',
         'heating_sources': 'editedFacts/heatingSources',
         'heating_system': 'editedFacts/heatingSystem',
+        'cooling_system': 'editedFacts/coolingSystem',
         'rooms': 'editedFacts/rooms',
         'num_rooms': 'editedFacts/numRooms',
         'appliances': 'editedFacts/appliances',

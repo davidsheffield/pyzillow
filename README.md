@@ -120,6 +120,7 @@ The following attributes are currently supported:
     - parking_type
     - heating_sources
     - heating_system
+    - cooling_system
     - rooms
     - num_rooms
     - appliances
