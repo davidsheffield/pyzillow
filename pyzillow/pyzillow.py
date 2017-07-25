@@ -153,8 +153,10 @@ class GetDeepSearchResults(ZillowResults):
         'home_detail_link': 'result/links/homedetails',
         'graph_data_link': 'result/links/graphsanddata',
         'map_this_home_link': 'result/links/mapthishome',
+        'comparables_link': 'result/links/comparables',
         'latitude': 'result/address/latitude',
         'longitude': 'result/address/longitude',
+        'FIPS_county_code': 'result/FIPScounty',
         'tax_year': 'result/taxAssessmentYear',
         'tax_value': 'result/taxAssessment',
         'year_built': 'result/yearBuilt',
@@ -171,6 +173,11 @@ class GetDeepSearchResults(ZillowResults):
         'result/zestimate/valuationRange/high',
         'zestimate_valuationRange_low': 'result/zestimate/valuationRange/low',
         'zestimate_percentile': 'result/zestimate/percentile',
+        'region_zindex_value': 'result/localRealEstate/region/zindexValue',
+        'region_overview_link': 'result/localRealEstate/region/links/overview',
+        'region_fsbo_link':
+        'result/localRealEstate/region/links/forSaleByOwner',
+        'region_for_sale_link': 'result/localRealEstate/region/links/forSale',
     }
 
     def __init__(self, data, *args, **kwargs):

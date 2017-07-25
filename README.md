@@ -59,9 +59,11 @@ The following attributes are currently supported:
     - home_detail_link
     - graph_data_link
     - map_this_home_link
+    - comparables_link
     - latitude
     - latitude
     - coordinates
+    - FIPS_county_code
     - tax_year
     - tax_value
     - year_built
@@ -72,6 +74,10 @@ The following attributes are currently supported:
     - last_sold_date
     - last_sold_price_currency
     - last_sold_price
+    - region_zindex_value
+    - region_overview_link
+    - region_fsbo_link
+    - region_for_sale_link
 
 
 Usage of the GetUpdatedPropertyDetails API
