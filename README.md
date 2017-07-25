@@ -94,8 +94,7 @@ The following attributes are currently supported:
     - home_detail_link
     - photo_gallery
     - latitude
-    - latitude
-    - coordinates
+    - longitude
     - year_built
     - property_size
     - home_size
@@ -103,15 +102,23 @@ The following attributes are currently supported:
     - bedrooms
     - home_info
     - year_updated
-    - floors
+    - floor_material
+    - num_floors
     - basement
     - roof
     - view
+    - parking_type
     - heating_sources
     - heating_system
     - rooms
+    - num_rooms
+    - appliances
+    - exterior_material
+    - architecture
+    - num_units
     - neighborhood
     - school_district
+    - home_description
 
 The following attributes are not provided by the API:
 
