@@ -41,14 +41,14 @@ or download the source from https://github.com/hanneshapke/pyzillow and install
 Usage of the GetDeepSearchResults API
 -------------------------------------
 
-    from pyzillow.pyzillow import ZillowWrapper, GetDeepSearchResults
+    import pyzillow
     ...
     address = 'YOUR ADDRESS'
     zipcode = 'YOUR ZIPCODE'
     ...
-    zillow_data = ZillowWrapper(YOUR_ZILLOW_API_KEY)
+    zillow_data = pyzillow.ZillowWrapper(YOUR_ZILLOW_API_KEY)
     deep_search_response = zillow_data.get_deep_search_results(address, zipcode)
-    result = GetDeepSearchResults(deep_search_response)
+    result = pyzillow.GetDeepSearchResults(deep_search_response)
     ...
     result.zillow_id # zillow id, needed for the GetUpdatedPropertyDetails
 
@@ -83,13 +83,13 @@ The following attributes are currently supported:
 Usage of the GetUpdatedPropertyDetails API
 ------------------------------------------
 
-    from pyzillow.pyzillow import ZillowWrapper, GetUpdatedPropertyDetails
+    import pyzillow
     ...
     zillow_id = 'YOUR ZILLOW ID'
     ...
-    zillow_data = ZillowWrapper(YOUR_ZILLOW_API_KEY)
+    zillow_data = pyzillow.ZillowWrapper(YOUR_ZILLOW_API_KEY)
     updated_property_details_response = zillow_data.get_updated_property_details(zillow_id)
-    result = GetUpdatedPropertyDetails(updated_property_details_response)
+    result = pyzillow.GetUpdatedPropertyDetails(updated_property_details_response)
     ...
     result.rooms # number of rooms of the home
 
@@ -140,13 +140,13 @@ The following attributes are not provided by the API:
 Usage of the GetZestimate API
 ------------------------------------------
 
-    from pyzillow.pyzillow import ZillowWrapper, GetZestimate
+    import pyzillow
     ...
     zillow_id = 'YOUR ZILLOW ID'
     ...
-    zillow_data = ZillowWrapper(YOUR_ZILLOW_API_KEY)
+    zillow_data = pyzillow.ZillowWrapper(YOUR_ZILLOW_API_KEY)
     zestimate_response = zillow_data.get_zestimate(zillow_id)
-    result = GetZestimate(zestimate_response)
+    result = pyzillow.GetZestimate(zestimate_response)
     ...
     result.zestimate_amount # Zestimate amount
 
