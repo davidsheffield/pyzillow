@@ -42,6 +42,18 @@ class ZillowWrapper(object):
         }
         return self.get_data(url, params)
 
+    def get_zestimate(self, zpid):
+        """
+        GetZestimate API
+        """
+        url = 'http://www.zillow.com/webservice/GetZestimate.htm'
+
+        params = {
+            'zpid': zpid,
+            'zws-id': self.api_key
+        }
+        return self.get_data(url, params)
+
     def get_data(self, url, params):
         """
         """
@@ -227,3 +239,47 @@ class GetUpdatedPropertyDetails(ZillowResults):
                 self.__setattr__(attr, self.get_attr(attr))
             except AttributeError:
                 print ('AttributeError with %s' % attr)
+
+
+class GetZestimate(ZillowResults):
+    """
+    """
+    attribute_mapping = {
+        'zillow_id': 'zpid',
+        'home_detail_link': 'links/homedetails',
+        'graph_data_link': 'links/graphsanddata',
+        'map_this_home_link': 'links/mapthishome',
+        'comparables_link': 'links/comparables',
+        'street_address': 'address/street',
+        'zipcode': 'address/zipcode',
+        'city': 'address/city',
+        'state': 'address/state',
+        'latitude': 'address/latitude',
+        'longitude': 'address/longitude',
+        'zestimate_amount': 'zestimate/amount',
+        'zestimate_last_updated': 'zestimate/last-updated',
+        'zestimate_value_change': 'zestimate/valueChange',
+        'zestimate_valuation_range_high': 'zestimate/valuationRange/high',
+        'zestimate_valuation_range_low': 'zestimate/valuationRange/low',
+        'zestimate_percentile': 'zestimate/percentile',
+        'region_zindex_value': 'localRealEstate/region/zindexValue',
+        'region_overview_link': 'localRealEstate/region/links/overview',
+        'region_fsbo': 'localRealEstate/region/links/forSaleByOwner',
+        'region_for_sale': 'localRealEstate/region/links/forSale',
+        'zipcode_id': 'regions/zipcode-id',
+        'city_id': 'regions/city-id',
+        'county_id': 'regions/county-id',
+        'state_id': 'regions/state-id',
+    }
+
+    def __init__(self, data, *args, **kwargs):
+        """
+        Creates instance of GeocoderResult from the provided XML data array
+        """
+        self.data = data.findall('response')[0]
+        for attr in self.attribute_mapping.__iter__():
+            try:
+                self.__setattr__(attr, self.get_attr(attr))
+            except AttributeError:
+                print ('AttributeError with %s' % attr)
+

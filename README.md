@@ -131,6 +131,48 @@ The following attributes are not provided by the API:
     - last_sold_price
 
 
+Usage of the GetZestimate API
+------------------------------------------
+
+    from pyzillow.pyzillow import ZillowWrapper, GetZestimate
+    ...
+    zillow_id = 'YOUR ZILLOW ID'
+    ...
+    zillow_data = ZillowWrapper(YOUR_ZILLOW_API_KEY)
+    zestimate_response = zillow_data.get_zestimate(zillow_id)
+    result = GetZestimate(zestimate_response)
+    ...
+    result.zestimate_amount # Zestimate amount
+
+The following attributes are currently supported:
+
+    - zillow_id
+    - home_detail_link
+    - graph_data_link
+    - map_this_home_link
+    - comparables_link
+    - street_address
+    - zipcode
+    - city
+    - state
+    - latitude
+    - longitude
+    - zestimate_amount
+    - zestimate_last_updated
+    - zestimate_value_change
+    - zestimate_valuation_range_high
+    - zestimate_valuation_range_low
+    - zestimate_percentile
+    - region_zindex_value
+    - region_overview_link
+    - region_fsbo_link
+    - region_for_sale_link
+    - zipcode_id
+    - city_id
+    - county_id
+    - state_id
+
+
 Contact Information
 -------------------
 Author: Hannes Hapke
